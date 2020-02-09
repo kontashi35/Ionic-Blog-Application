@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Blog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="blogForm" class="ion-padding" >
+   
+    <div *ngIf="progress">
+      <ion-progress-bar type="indeterminate"></ion-progress-bar>
+    </div>
+<ion-card style="text-align: -webkit-center;">
+  <div>
+    <img src="/assets/icon/favicon.png" style="width: 200px; height: 200px; padding: 5px; margin-top: 10px;">  
+    <ion-input formControlName="url" placeholder="Enter image link"></ion-input>
+  </div>
+</ion-card>
+<ion-item>
+  <ion-label position="floating">Enter Title</ion-label>
+  <ion-input formControlName="title"></ion-input>
+</ion-item>
+<div style="width: 300px; text-align: initial; padding: 5px; margin-top: 10px;">
+  <ion-item>
+    <ion-label position="floating">Type Description</ion-label>
+    <ion-textarea formControlName="description"></ion-textarea>
+  </ion-item>
+</div>
+<div style="text-align: center; margin-top: 10px;">
+  <ion-button (click)="uploadBlog()">{{uploadBtn}}</ion-button>
+
+</div>
+<div style="text-align: center; margin-top: 10px;" *ngIf="isEditPage">
+  <ion-button (click)="deleteBlog()" color="danger">Delete</ion-button>
+
+</div>
+
+</form>
+
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "ad-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

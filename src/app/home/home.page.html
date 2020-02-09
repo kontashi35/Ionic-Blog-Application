@@ -1,14 +1,33 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+     Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+   
+    <div *ngIf="showProgress">
+      <ion-progress-bar type="indeterminate"></ion-progress-bar>
+    </div>
+    <div *ngFor="let blog of blogs">
+      <ion-card style="text-align: -webkit-center;" (click)="editBlog(blog)">
+        <div>
+          <img src="{{blog.url}}" style="width: 200px; padding: 5px; margin-top: 10px;">  
+          <ion-label style="font-weight: bold; margin-top: 10px;">{{blog.title}}</ion-label>
+          <div style="width: 300px; text-align: initial; padding: 15px; margin-top: 10px;">
+            <label>{{blog.description}}</label>
+          </div>
+        </div>
+      </ion-card>
+    </div>
+
   </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/addblog']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
