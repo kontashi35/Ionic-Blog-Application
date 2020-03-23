@@ -20,4 +20,27 @@ Body
 	"title":"Sazu",
 	"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when ",
 	"url":"https://oi217.photobucket.com/albums/cc312/mastersig/Avitars/For%20Me/C_D_A.png"
-}`
+}`   
+2. Delete blog   
+
+https://bloappapi.herokuapp.com/api/blog/delete/33   
+Method DELETE   
+
+3. Update blog   
+
+https://bloappapi.herokuapp.com/api/blog/update/33   
+Method PUT   
+Body   
+`{
+	"id":33,
+	"title":"update",
+	"description":"you updated",
+	"url":"www.acac.com"
+}`   
+
+4.Get blog   
+
+https://bloappapi.herokuapp.com/api/blog/get
+Method GET   
+
+
