@@ -42,5 +42,7 @@ Body
 
 https://bloappapi.herokuapp.com/api/blog/get
 Method GET   
+![](https://media.giphy.com/media/U6w7xHxybDKJdoRc9G/giphy.gif)
+
 
 
